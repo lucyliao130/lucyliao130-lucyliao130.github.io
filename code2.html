@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="aaa bbbb">
+  <meta name="keywords" content="關鍵字1,關鍵字2,關鍵字3,關鍵字4 ">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      vertical-align: baseline;
+      background: transparent;
+      font-size: 0.75rem;
+      font-weight: normal;
+      line-height: 1.86em;
+      word-spacing: 1px;
+      letter-spacing: 1px;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+
+    /*  */
+    main {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+
+    /* article */
+    article {
+      background-color: rgb(34, 204, 222);
+      width: 70%;
+      margin-right: 5%;
+    }
+
+    aside {
+      background-color: rgb(34, 204, 222);
+      width: 25%;
+    }
+
+    /* footer */
+    footer {
+      height: 100px;
+
+    }
+
+    .col-1 {
+      background: rgb(34, 204, 222);
+    }
+
+    /* id */
+    #header {
+      height: 50px;
+      background-color: rgb(34, 204, 222);
+      margin-bottom: 20px;
+    }
+
+    /* 導航 */
+    .nav {
+      height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      margin: 0.25rem 0.125rem;
+    }
+
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+
+
+    .btn-primary:hover {
+      color: #fff;
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
+
+    .btn-primary {
+      background-color: #e18308;
+    }
+
+    .btn-success {
+      color: #fff;
+      background-color: #198754;
+      border-color: #198754;
+    }
+
+    .btn-warning {
+      color: #000;
+      background-color: #ffc107;
+      border-color: #ffc107;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 區塊元素 -->
+  <header id="header">
+    <h1>網站標題</h1>
+  </header>
+  <nav class="col-1 nav " style="">
+    <ul>
+      <li><a href="#" class="btn btn-primary btn-sm">公司介紹</a></li>
+      <li><a href="#" class="btn btn-success btn-sm">聯絡我們</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      article
+      <section>
+        section
+      </section>
+    </article>
+    <aside>
+      aside
+    </aside>
+  </main>
+  <footer class="col-1">
+    footer
+  </footer>
+
+</body>
+
+</html>
