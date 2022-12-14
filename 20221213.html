@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .box{
+            background-color: rgb(200, 180, 245);
+            height: 300px;
+            /* 關於flex觀看測試，可到網站flexbox playground */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* align-content是flex-align選擇wrap有換行的時候，才換這個content操作 */
+        }
+        /* rgb(0-255,0-255,0-255)就是色相、飽和度、亮度 */
+        /* #六碼 */
+        .item{
+            width: 100px;
+            /* height: 100px; */
+            min-height: 100px;
+            /* min-height是沒有設定字大小，也會支撐著item的大小 */
+            background-color: rgb(193, 203, 247);
+            border: 1px solid #666;
+            color: rgb(55, 20, 20);
+            /* border-radius就會把div變圓角，可用px和％ */
+            border-radius: 5%;
+            /* 東西要放畫面正中間，就在layout裡面用display:flex這樣內容物就能隨螢幕變化調整，等於自動排列，兩個東西以上才會看出變化 */
+            display: flex;
+            /* 內容物置中排列 */
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            /* flex-grow是讓item平均分配寬度 */
+            flex-grow: 1;
+        }
+        /* alt+shift+下鍵就會複製 */
+        .a{
+            background-color: #f86;
+        }
+        .b{
+            background-color: rgb(240, 252, 210);
+        }
+        .c{
+            background-color: rgb(181, 221, 247);
+            flex-grow: 1.5;
+            /* 但下面這個撐開佔整個高度範圍，需要沒有設置height */
+            align-self: stretch;
+        }
+        .d{
+            background-color: rgb(247, 224, 251);
+        }
+        .e{
+            background-color: rgb(250, 200, 219);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="box">
+    <!-- class裡面有item,a這樣item{}、a{}都會套用 -->
+    <div class="item a" >A</div>
+    <div class="item b">B</div>
+    <div class="item c">C</div>
+    <div class="item d">D</div>
+    <div class="item e">E</div>
+</div>
+
+
+
+
+</body>
+</html>
