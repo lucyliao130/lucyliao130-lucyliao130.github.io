@@ -10,7 +10,29 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Noto+Serif+TC:wght@200;600&display=swap');
     .header{
         background-color: rgb(0, 0, 0);
+        /* 區塊內排列方式flex或text-align */
+        display: flex;
     }
+            /* 超連結的顏色改變跟一般不ㄧ樣 */
+    .header a{
+        color: rgb(252, 252, 252);
+        /* 去超連結底線 */
+        text-decoration: none;
+        font-weight: bolder;
+        /* 因為a、圖片...都是inline的排同一列的物件，所以要轉成區塊， 才能改長寬邊距 */
+        display: inline-block;
+        padding: 10px;
+
+    }
+    nav{
+        text-align: right;
+        flex-grow: 5;
+    }
+    .header comp{
+            font-weight: bold;
+            font-size: 30px;
+            align-self: center;
+        }
     h1{
         font-family: 'Noto Serif TC', serif;
         /* font-weight是字的粗細 */
@@ -25,27 +47,52 @@
         font-size: 16px;
         font-weight: 300;
     }
+    .layout{
+        display: flex;
+    }
+    .card{
+        /* flex的三種縮放一次寫 */
+        flex: 1 1 auto;
+    }
+    .card img{
+        width:100%;
+    }
 </style>
 </head>
 <body>
     <!-- 網頁導覽列nav -->
 <div class="header">
+    <img src="https://img.logoipsum.com/289.svg" alt="logo" style="margin-left:20px ;">
+    <span class="comp">手作坊</span>
     <nav>
         <a href="#" title="" target="_blank">首頁</a>
         <a href="#">最新活動</a>
         <a href="#">熱賣商品</a>
         <a href="#">產品列表</a>
-        <a href="#">聯絡我們</a>
-
+        <a href="#" style="margin-right: 100px;">聯絡我們</a>
     </nav>
-
 </div>
-
     <!-- 網頁內容 -->
 <h1>最新消息</h1>
 <p class="ch">公佈提交身體預期電視台政治顯然成為企業不滿，現代重量哪些模型生態在這個立刻都會說明，更新時間宅宅法院到了保留尤其一會兒方案無限逐步，評論版權所有指揮女兒機器幫你級別全市，萬華針對電子商務標誌初音似乎深刻男子最佳熱門，農民僅供方式，如同國家有一體內給我們碩。</p>
 <p class="en">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aspernatur mollitia incidunt odio eius quidem ipsum doloribus eaque, modi maiores dolorum quae repudiandae cumque odit nisi. Possimus dolore aliquid non?</p>
-
+<div class="layout">
+    <div class="card">
+        <img src="https://picsum.photos/id/684/600/400?random1&quot" alt="">
+        <h3>Index-1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda aut ratione nesciunt repellat natus</p>
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/id/684/600/400?random2&quot" alt="">
+        <h3>Index-2</h3>
+        <p>uscipit voluptatibus voluptatum, necessitatibus voluptate consectetur quidem voluptatem. Culpa totam eos eveniet assumenda!</p>
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/id/684/600/400?random3&quot" alt="">
+        <h3>Index-3</h3>
+        <p>voluptate consectetur quidem voluptatem. Culpa totam eos eveniet assumenda!</p>
+    </div>
+</div>
 
 
 
