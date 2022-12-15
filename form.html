@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(223, 251, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">HTML 表單語法 測試 </h1>
+        <form action="接收表單目的" method="post" id="myForm" enctype="multipart/form-data" class="form-horizontal">
+      <!-- input text 文字方塊(單行)-->
+      <div class="mb-3" >
+        <label for="name" class="form-label">姓名</label>
+        <input type="text" name='name' value='' class="form-control" id="name" aria-describedby="nameHelp" required>
+        <div id="nameHelp" class="form-text">請輸入姓名(網頁無障礙語法)</div>
+      </div>
+       <!-- input url 網址 -->
+       <div class="mb-3">
+        <label for="url" class="form-label">網址</label>
+        <input type="url" name="url" value=''  class="form-control" id="url" aria-describedby="urlHelp" >
+        <div id="urlHelp" class="form-text">請輸入網址</div>
+      </div>
+        <!-- input email EMAIL-->
+        <div class="mb-3">
+            <label for="email" class="form-label">EMAIL</label>
+            <input type="email" name="email" value=''  class="form-control" id="email" aria-describedby="emailHelp" >
+            <div id="emailHelp" class="form-text">請輸入EMAIL</div>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+            </div>
+</body>
+</html>
