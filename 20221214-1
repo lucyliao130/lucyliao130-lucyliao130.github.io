@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--RWD 必要元素-->
     <title>簡單排個版</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,33 +16,13 @@
         /* 導覽列格式 */
         .header{
             background-color: #000;
-            display: flex;
-            color: #fff;
-            /* position定位、固定住 */
-            position: fixed;
-            top: 0;
-            width: 100%;
-            /* z-index是圖層順序，預設是0 */
-            z-index:2 ;
-        }
-        .banner{
-            width: 100%;
-            /* width:auto就會限制寬度，不會因為padding的原因凸出去 */
-            width: auto;
-            height: 200px;
-            background-image:url(https://cdn.pixabay.com/photo/2022/12/05/08/54/clouds-7636282_1280.jpg) ;
-            background-size: cover;
-            background-position: center;
-            padding: 100px;
-            font-size: 60px;
             color: #fff;
         }
         .header .comp{
             font-weight: bold;
             font-size: 30px;
             align-self: center;
-            /* 螢幕壓縮不會換行flex-shrink:0 */
-            flex-shrink:0;
+            flex-shrink: 0;
         }
         .header a{
             color: #fa3;
@@ -57,8 +37,21 @@
             flex-grow: 1;
         }
         nav .side{
-            margin-right: 1%;
+            margin-right: .5%;
         }
+
+        /* Banner */
+        .banner{
+            width: 100%;
+            height: 300px;
+            background-image: url(https://picsum.photos/2100/700?random6);
+            background-size: cover;
+            background-position: center;
+            padding: 100px;
+            font-size: 80px;
+            color: #fa3;
+        }
+
         /* 內容樣式 */
         h1{
             font-family: 'Noto Serif TC', serif;
@@ -68,14 +61,14 @@
             font-family: 'Noto Serif TC', serif;
             font-weight: 500;
         }
-        p.EN, .banner{
+        p.EN,.banner{
             font-family: 'Lobster Two', cursive;
             font-weight: 400;
         }
 
         /* CARD 卡片 */
         .layout{
-            /* display: flex; */
+            margin-top: 40px;
         }
         .card{
             flex: 1 1 auto;     /* grow-shrink-basis */
@@ -83,16 +76,6 @@
             /* padding: 1%; */
             border: 1px solid #aaa;
             border-radius: 10px;
-            position: relative;
-        }
-        .card .tag{
-            background-color: rgb(246, 72, 72);
-            color: beige;
-            font-weight: 800;
-            padding: 15px;
-            border-radius: 60%;
-            position: absolute;
-            top:20px;
         }
         .card .space{
             height: 20px;
@@ -105,44 +88,55 @@
             width: 90%;
             margin: auto;
         }
-        .medium{
-            flex: 1 1 auto;
+
+        /* 活動簡介 */
+        .intro{
+            background-color: #f8dca8;
+            margin: 40px 0;
         }
-        .outside .medium .img{
-            vertical-align: bottom;
-            /* 修正圖片底部 */
+        .intro .limit{
+            width: 80%;
+            margin: auto;
+            background-color: #ccc;
+            background-color: rgb(235, 157, 157);
         }
-        .outside .medium .text{
+        .intro .limit .infoPic{
+            flex: 1 1 0;
+        }
+        .intro .limit .infoPic img{
+            width: 100%;
+            vertical-align: bottom;     /* 修正圖片底部對齊 */
+        }
+        .intro .limit .infoText{
             padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             /* align-items: center; */
+            flex: 1 1 0;
         }
-        /* RWD寫法 ，iphone尺寸設計一般是768，設定畫面最小768，所以超過就要另外宣告，其他地方display flex要拿掉*/
-        /* 容器有多個物件，一般都需要用display flex來控制 */
-        @media screen and (min-width:768px){
-            .layout{
-                display: flex;
-            }
-            .header{
-                display: flex;
-                position: fixed;
-                top: 0;
-                width: 100%;
-            /* z-index是圖層順序，預設是0 */
-                z-index:2 ;
-            }
-            .medium{
-                display: flex;
-            }
-        }
+
+        /* 頁尾 */
         .footer{
             background-color: #000;
             color: #fa3;
             text-align: center;
             padding: 10px;
             margin-top: 60px;
+        }
+
+        /* RWD控制 */
+        @media screen and (min-width:768px){
+            .header{
+                display: flex;
+            }
+            .layout{
+                display: flex;
+            }
+            .intro .limit{
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -158,10 +152,12 @@
             <a href="#" class="side">技術支援</a>
         </nav>
     </div>
-    <!--banner-->
+
+    <!-- Banner -->
     <div class="banner">
         HAND MADE
-        </div>
+    </div>
+
     <!-- 網頁內容 -->
     <h1>最新消息</h1>
     <p class="CT">房屋他就，有限尤其是提升排名可能地上我還不懂損失一邊貨幣高手評估，有利於首先導致高校一本交給，則是以前門口部落格選單，請求及時女生楠雅是什麼，服裝價格股份更新文本還沒有大連簡單節省此外舉行加上，笑容說道設定消費行動，一番解放禁止下一頁沒有什麼多媒體無疑積極不出移動，感到而在這位太陽生命商家代理模樣難道一下子點這裡下載，英國導致特別是營養玻璃集體密碼只能加油平台萬華發佈時間，具體無限推出前面幹部隨時因為變得不起體系品種形象看見，億元顧客總算所有人時間一路不在客服隊伍試題，回家感興趣你會級別，果然。</p>
@@ -179,8 +175,6 @@
             </div>
         </div>
         <div class="card">
-            <div class="tag">
-            HOT</div>
             <div class="space"></div>
             <img src="https://picsum.photos/600/400?random2" alt="CardPicture">
             <div class="card-text">
@@ -197,18 +191,23 @@
             </div>
         </div>
     </div>
-    <div class="outside">
-        <div class="medium">
-            <div class="img">
-                <img src="https://picsum.photos/600/400?random4" alt="Picture">
+    <div class="intro">
+        <div class="limit">
+            <div class="infoPic">
+                <img src="https://picsum.photos/600/400?random4"
+alt="ProjectPicture">
             </div>
-            <div class="text">
-                <h2>標題</h2>
-                <p>鏡頭普遍將在球隊現代化，根據生命農民降低表示，出生外國，等級懂得對話花蓮隨便事務做到跟我小孩難以才是以為精靈人大</p>
+            <div class="infoText">
+                <h3>活動簡介</h3>
+                <p>技巧來源產生狀態更好只需兩個軟體全身請求興奮以前隊伍只需，也沒現在民主鮮花聯絡人同時戰鬥分析，部分反對採用尊重商機會不會沒人簡直我要做法正在工業裝備新臺幣，制度售價不會好像大學生可憐劇情有個，失去想想發達本公司鮮花自我天下溫度法規證件，一生不詳請大家行情吃了供應商是啊讓我們爸爸一股，帶來傢伙差距硬盤創業，專利解決，新臺幣能力得知出租有關部門城市，觀點發生默認好激動媽媽政治郵遞區號精選批准湖口，興。</p>
             </div>
         </div>
     </div>
+    <h3>活動說明</h3>
+    <p>女朋友請點擊文章哥哥分類都說螢幕基層科技至於更新時間，擔任保持，難得僅供打了會議，順利沒有什麼，我來出售章節章節搭配世界盃，當前位置評價是以警察每月的是對面做到這一點運行大家由於買賣，夫人兩個主營雙方，同學基礎上包括投資者出租解壓固定因為部落格，兩種不必承擔包裝機構衛生精采是由平方米熱情它們傳真教程，卻是自動正常思路，設置前進男性，回答青年藝術去年策劃明確，導演實在，專家平台崇拜公斤徹底親自原文，東西高雄害怕怎麼辦我在申請，其他的部隊要求其實風情到了，不承擔上網參觀，線路床上，第一個愛情從此承擔公共大小範圍，日常表示警方寶寶聯繫一條默認你怎麼印象，寵物並不方案不詳信譽相對，適當早已是有，說明。</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus at consectetur maxime beatae repellendus, voluptates eum ipsa consequuntur adipisci aliquid, laborum possimus dolore corporis vel quos nam ut corrupti qui quo! Ad libero dolorem veritatis debitis, tempore suscipit adipisci, repellendus sunt molestiae veniam labore fugit unde perferendis numquam nulla saepe pariatur blanditiis? Delectus numquam animi distinctio illum ex, odio omnis sed debitis perspiciatis, ea consequuntur. Praesentium aut illo maxime rem optio consequatur, reprehenderit quos, quam iusto et asperiores obcaecati corrupti aspernatur recusandae perferendis nisi quod at? Dicta obcaecati doloribus alias in quia sapiente cupiditate atque corrupti voluptas maiores perferendis est delectus magnam, enim itaque, facilis quas totam numquam. Sapiente facilis est amet, nemo aspernatur corporis accusamus ducimus molestiae libero ad ab culpa delectus dolores dignissimos laborum odio rerum ipsum natus blanditiis impedit. Excepturi animi, repellat fuga quasi odit consequuntur quisquam numquam ut aut impedit doloribus eum omnis. Aperiam autem reiciendis iure velit expedita quisquam illum minus qui accusamus eveniet quia debitis, assumenda corporis doloremque sed esse optio quos neque natus tenetur dolorem error, facere nesciunt? Quo ipsa vel veritatis earum officiis, sint natus veniam laborum quia! Facilis minus cum quibusdam ducimus quia, soluta eaque, dolorem amet cupiditate quo quasi eius.</p>
     <div class="footer">
-        &copy; copyright 2022 by me.
+        &copy; copyright 2022 by Niko.
+    </div>
 </body>
 </html>
