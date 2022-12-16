@@ -24,6 +24,13 @@
             width: 100%;
             /* z-index是圖層順序，預設是0 */
             z-index:2 ;
+            /* 轉場動畫transition，會搭配hover使用*/
+            transition: 0.5s;
+        }
+        /* 滑鼠移過去有變化 hover */
+        .header a:hover{
+            background-color: rgb(240, 95, 23);
+            padding: 10px 20px;
         }
         .banner{
             width: 100%;
@@ -93,6 +100,8 @@
             border-radius: 60%;
             position: absolute;
             top:20px;
+            left: 10px;
+            z-index: 2;
         }
         .card .space{
             height: 20px;
@@ -100,6 +109,11 @@
         .card img{
             width: 100%;
             /* border-radius: 10px 10px 0 0; */
+            opacity: 0.8;
+            transition:0.5s;
+        }
+        .card .img:hover{
+            opacity: 1;
         }
         .card .card-text{
             width: 90%;
@@ -172,14 +186,14 @@
     <div class="layout">
         <div class="card">
             <div class="space"></div>
-            <img src="https://picsum.photos/600/400?random1" alt="CardPicture">
+            <img src="https://picsum.photos/600/400?random1" alt="CardPicture";>
             <div class="card-text">
                 <h3>Index-1</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ad illum, quaerat, debitis autem corporis vel ab dolorem eaque accusamus dolore totam enim fugit in veritatis molestias, excepturi exercitationem ratione quibusdam incidunt ex. At placeat repellat sint, nesciunt error doloribus amet adipisci dolore labore inventore, cupiditate culpa omnis dolor iusto, esse dolores sed! Minus, voluptates odit consectetur fugit facilis similique vel eaque vero commodi possimus ea, perspiciatis magni! Iusto sed consequuntur commodi veritatis deleniti magni recusandae facilis. Ut fugiat harum, aspernatur quasi rem delectus magnam! Nihil recusandae id aliquam perspiciatis numquam molestias explicabo sed culpa mollitia delectus, illum minus odit.</p>
             </div>
         </div>
         <div class="card">
-            <div class="tag">
+            <div class="tag"; >
             HOT</div>
             <div class="space"></div>
             <img src="https://picsum.photos/600/400?random2" alt="CardPicture">
