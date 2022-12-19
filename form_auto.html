@@ -53,12 +53,10 @@
 
   <script>
     window.onload = function() {
-        let callback_url = window.location.href;
-      let submitBtn = document.getElementById('submit');
-      submitBtn.onclick = function() {//監聽 submit
-
-
-      }
+    // let url = window.location.href;
+    let callback_url = document.getElementById('callback_url');
+      callback_url.value = window.location.href;
+      submitBtn.onclick = function() {//監聽 submit}
 
       let box = document.querySelector('.container');
       box.insertAdjacentHTML("afterend", "<div class='text-center mt-3'>container寬度：" + box.clientWidth + "px</div>" + "<div class='text-center mt-3'>網頁可見區域寬：" + document.body.clientWidth + "px</div>");
