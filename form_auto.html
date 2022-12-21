@@ -67,31 +67,9 @@
           </div>
         </div>
 
-        <!-- 下拉選單 -->
-        <div class="col-sm-6 mb-3">
-          <label class="form-label">下拉選單</label>
-          <select name="select" class="form-select" id="select">
-            <option value="下拉選單1">下拉選單1</option>
-            <option value="下拉選單2" selected>下拉選單2</option>
-            <option value="下拉選單3">下拉選單3</option>
-          </select>
-        </div>
 
-        <!-- 下拉選單(多選) -->
-        <div class="col-sm-6 mb-3">
-          <label class="form-label">下拉選單(多選)</label>
-          <select name="select_m" class="form-select" id="select_m" multiple>
-            <option value="下拉選單(多選)1">下拉選單(多選)1</option>
-            <option value="下拉選單(多選)2" selected>下拉選單(多選)2</option>
-            <option value="下拉選單(多選)3">下拉選單(多選)3</option>
-          </select>
-        </div>
 
-        <!-- 文字區域(多行) -->
-        <div class="col-sm-12 mb-3">
-          <label class="form-label">文字區域</label>
-          <textarea name="textarea" class="form-control" id="textarea" rows="5" required>文字區域123</textarea>
-        </div>
+
       </div>
 
 
@@ -119,7 +97,7 @@
       box.insertAdjacentHTML("afterend", "<div class='text-center mt-3'>container寬度：" + box.clientWidth + "px</div>" + "<div class='text-center mt-3'>網頁可見區域寬：" + document.body.clientWidth + "px</div>");
 
       // 整理出來的結構資料
-
+      // stru[0]['label']
       let stru = [{
           label: '姓名',
           type: 'text',
@@ -215,13 +193,40 @@
           type: 'radio',
           name: 'radio',
           value: '',
-          valid: '', //required
+          valid: 'required', //required
           option: '雞腿|排骨|招牌',
           width: '6'
         },
+        {
+          label: '單位',
+          type: 'select',
+          name: 'unit',
+          value: '',
+          valid: 'required', //required
+          option: '行政|訓導|總務',
+          width: '3'
+        },
+        {
+          label: '地區',
+          type: 'select_m',
+          name: 'area',
+          value: '',
+          valid: 'required', //required
+          option: '台南|高雄|屏東',
+          width: '3'
+        },
+        {
+          label: '詳細內容',
+          type: '段落',
+          name: 'textarea',
+          value: '123',
+          valid: 'required', //required
+          option: '',
+          width: '12'
+        },
       ];
       let form_item = document.getElementById('form_item');
-      let form_item_html = '';
+      let form_item_html = options_html = '';
       let options;
       // let a = "123abc";
       // let c = "000"+ a +"qwe" ;
@@ -245,30 +250,78 @@
             </div>`;
         }else if(stru[i]['type'] === 'radio'){
           options = stru[i]['option'].split('|');
+          options_html = '';
+          /*
+            ['雞腿', '排骨', '招牌']
+            options[0]
+            options[1]
+            options[2]
+            options[j]
+          */
+          for(let j in options){
+            // 三元運算
+            let required = (j=='0') ? stru[i]['valid'] : '';
+            options_html += `
+              <div class="form-check form-check-inline">
+                <input type="${stru[i]['type']}" name="${stru[i]['name']}" value="${options[j]}" class="form-check-input" id="${stru[i]['name']}_${j}" ${required}>
+                <label class="form-check-label" for="${stru[i]['name']}_${j}">${options[j]}</label>
+              </div>`;
+          };
 
-          console.log(options);
+          // console.log(options_html);
           //跑迴圈
           //選項html
           form_item_html += `
             <div class="col-sm-${stru[i]['width']} mb-3">
               <label class="form-label w-100">${stru[i]['label']}</label>
-
-              <div class="form-check form-check-inline">
-                <input type="radio" name="radio" value="單選1" class="form-check-input" id="radio_1" required>
-                <label class="form-check-label" for="radio_1">單選1</label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                <input type="radio" name="radio" value="單選2" class="form-check-input" id="radio_2">
-                <label class="form-check-label" for="radio_2">單選2</label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                <input type="radio" name="radio" value="單選3" class="form-check-input" id="radio_3">
-                <label class="form-check-label" for="radio_3">單選3</label>
-              </div>
+              ${options_html}
             </div>`;
 
+        }else if(stru[i]['type'] === 'select'){
+          // 1.首先替換 變數
+          // 2.將 stru[i]['option'] => 陣列 ['下拉選單1', '下拉選單2', '下拉選單3']
+          // 3.跑迴圈
+          // stru[i]['option'] => '行政|訓導|總務'
+          options = stru[i]['option'].split('|');
+          options_html = '';
+          for(let j in options){
+            options_html += `
+              <option value="${options[j]}">${options[j]}</option>`;
+          }
+
+          form_item_html += `
+            <div class="col-sm-${stru[i]['width']} mb-3">
+              <label class="form-label">${stru[i]['label']}</label>
+              <select name="${stru[i]['name']}" class="form-select" id="${stru[i]['name']}" ${stru[i]['valid']}>
+               ${options_html}
+              </select>
+            </div>`;
+        }else if(stru[i]['type'] === 'select_m'){
+          // 1.首先替換 變數
+          // 2.將 stru[i]['option'] => 陣列 ['下拉選單1', '下拉選單2', '下拉選單3']
+          // 3.跑迴圈
+          // stru[i]['option'] => '行政|訓導|總務'
+          options = stru[i]['option'].split('|');
+          options_html = '';
+          for(let j in options){
+            options_html += `
+              <option value="${options[j]}">${options[j]}</option>`;
+          }
+
+          form_item_html += `
+            <div class="col-sm-${stru[i]['width']} mb-3">
+              <label class="form-label">${stru[i]['label']}</label>
+              <select name="${stru[i]['name']}" class="form-select" id="${stru[i]['name']}" ${stru[i]['valid']} multiple >
+               ${options_html}
+              </select>
+            </div>`;
+        }else if(stru[i]['type'] === '段落'){
+
+          form_item_html += `
+            <div class="col-sm-12${stru[i]['width']} mb-3">
+              <label class="form-label">${stru[i]['label']}</label>
+              <textarea name="${stru[i]['name']}" class="form-control" id="${stru[i]['name']}" rows="5" ${stru[i]['valid']}>${stru[i]['value']}</textarea>
+            </div>`;
         }
 
       }
