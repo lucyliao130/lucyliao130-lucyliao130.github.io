@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,50 +11,57 @@
     <link rel="stylesheet" href="style.css">
     <!--所以改樣式有三種方法。一、用link href另外加入css樣式檔。二、直接在head新增style改。三、直接在body的區塊元素（head,main,article...)改-->
     <style>
-    header,nav{
-    height:80px;
-    background-color:rgb(56, 91, 199);
-    }
-    main{
-    display: flex;
-    flex-direction: row;
-    }
-    article{
-    background-color: brown;
-    width:70%}
-    aside{
-    background-color: rgb(42, 42, 165);
-    width:70%
-    }
+        header,
+        nav {
+            height: 80px;
+            background-color: rgb(56, 91, 199);
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        article {
+            background-color: brown;
+            width: 70%
+        }
+
+        aside {
+            background-color: rgb(42, 42, 165);
+            width: 70%
+        }
     </style>
 </head>
+
 <body>
-  <!--按照header,footer,nav,article,section,aside這樣配置頁面有利於seo-->
-<header>
-  header
-  網站標題
-</header>
-<nav>
-  nav
-</nav>
-<!--main可包住article跟aside左右區塊，就是主要區域-->
-<!--span是行內元素-->
-  <span style="background-color: aquamarine;">12333</span>
-<!--header,nav,footer....區塊元素-->
-<main style="background-color:beige;">
-  main
-  <article>
-    article
-    <section>
-      section
-    </section>
-  </article>
-  <aside>
-    aside
-  </aside>
-</main>
-<footer>
-  footer
-</footer>
+    <!--按照header,footer,nav,article,section,aside這樣配置頁面有利於seo-->
+    <header>
+        header
+        網站標題
+    </header>
+    <nav>
+        nav
+    </nav>
+    <!--main可包住article跟aside左右區塊，就是主要區域-->
+    <!--span是行內元素-->
+    <span style="background-color: aquamarine;">12333</span>
+    <!--header,nav,footer....區塊元素-->
+    <main style="background-color:beige;">
+        main
+        <article>
+            article
+            <section>
+                section
+            </section>
+        </article>
+        <aside>
+            aside
+        </aside>
+    </main>
+    <footer>
+        footer
+    </footer>
 </body>
+
 </html>

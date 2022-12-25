@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container{
-            background-color: rgb(223, 251, 255);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  <title>表單</title>
 </head>
-<body>
-    <div class="container">
-        <h1 class="text-center">HTML 表單語法 測試 </h1>
-        <form action="接收表單目的" method="post" id="myForm" enctype="multipart/form-data" class="form-horizontal">
-      <!-- input text 文字方塊(單行)-->
-      <div class="mb-3" >
-        <label for="name" class="form-label">姓名</label>
-        <input type="text" name='name' value='' class="form-control" id="name" aria-describedby="nameHelp" required>
-        <div id="nameHelp" class="form-text">請輸入姓名(網頁無障礙語法)</div>
-      </div>
-       <!-- input url 網址 -->
-       <div class="mb-3">
-        <label for="url" class="form-label">網址</label>
-        <input type="url" name="url" value=''  class="form-control" id="url" aria-describedby="urlHelp" >
-        <div id="urlHelp" class="form-text">請輸入網址</div>
-      </div>
-        <!-- input email EMAIL-->
-        <div class="mb-3">
-            <label for="email" class="form-label">EMAIL</label>
-            <input type="email" name="email" value=''  class="form-control" id="email" aria-describedby="emailHelp" >
-            <div id="emailHelp" class="form-text">請輸入EMAIL</div>
-        </div>
-        <form class="row g-3">
-            <div class="col-md-4">
-              <label for="validationDefault01" class="form-label">First name</label>
-              <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
-            </div>
+  <h1 class="text-center mt-3">表單</h1>
+  <form action="https://script.google.com/macros/s/AKfycbykvyxRGdxE1Rl2pnLXBzX4gwEn612WWHAyYj-r0DGkMXz_fG2VJ2LPI2UbcWpDOjClsQ/exec" method="post" target="_self">
+  <input type="text" name="name" value="在這裡打字" id="" ></input>
+  <button type="submit" name="btn" value="送出" id="">送出</button>
+  </form>
 </body>
 </html>
