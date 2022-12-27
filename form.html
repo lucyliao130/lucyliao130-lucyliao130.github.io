@@ -9,6 +9,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  <style>
+    input:invalid,
+    select:invalid,
+    textarea:invalid,
+    input:focus:invalid,
+    selectfocus:invalid,
+    textareafocus:invalid,
+    {
+      border-color: #dc3545;
+    }
+
+    input:focus:invalid,
+    select:focus:invalid,
+    textarea:focus:invalid {
+      outline: none;
+      color: #212529;
+      background-color: #fff;
+      border-color: #74e7e1;
+      box-shadow: 0 0 0 0.25rem rgba(162, 15, 15, 0.25);
+    }
+  </style>
     <title>表單</title>
 
 </head>
