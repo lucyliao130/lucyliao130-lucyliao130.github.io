@@ -6,5 +6,6 @@ function test(){
     name:'name',
     value:'',
     valid:'required'
+    option: "單選1|單選2|單選3"
     };
 }
