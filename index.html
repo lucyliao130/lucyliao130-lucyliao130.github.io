@@ -12,9 +12,6 @@
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
-
   <title>表單</title>
   <style>
     input:invalid,
@@ -39,7 +36,7 @@
   <main class="container">
     <h1 class="text-center mt-3">表單</h1>
 
-    <form action="https://script.google.com/macros/s/AKfycby7I64xUHnuGUygGo3vmLHXaIMIkrtQ58PYP3lPUefVFfmWQEXV9PyCcvj-qm1skr2Mxg/exec" method="post" id="myForm">
+    <form action="https://script.google.com/macros/s/AKfycbzJIGqfIyBr-jyZOnWmRF74RvIyCnJO3TmwZJ8FKxVV-PTq5AhtRYmU36wVT6Ik_e5W/exec" method="post" id="myForm">
       <div class="row" id="form_item">
       </div>
 
@@ -56,9 +53,8 @@
 
   <script>
     window.onload = function() {
-      // let url = window.location.href;
-      let callback_url = document.getElementById('callback_url');
-      callback_url.value = window.location.href;
+        let callback_url = document.getElementById(callback_url);
+        callback_url.value = window.location.href;
 
       let submitBtn = document.getElementById('submit');
       submitBtn.onclick = function() {//監聽 submit
@@ -74,7 +70,7 @@
           type: 'text',
           name: 'name',
           value: '',
-          valid: 'required',
+          valid: '',
           option: '',
           width: '3'
         },
@@ -191,7 +187,7 @@
           type: 'select_m',
           name: 'select_m',
           value: '',
-          valid: '', //required
+          valid: 'required', //required
           option: '下拉選單(多選)1|下拉選單(多選)2|下拉選單(多選)3|下拉選單(多選)4|下拉選單(多選)5',
           width: '6'
         },
@@ -351,12 +347,6 @@
       form_item_id.innerHTML = form_item;
 
     }
-    $(function(){
-      let checkbox = $('.checkbox').each(function(){
-        console.log(this);
-        $(this).prop('checked', true);
-      })
-    })
 
     function renderCheckbox(name){
       if(isAtLeastOneChecked(name)){
@@ -379,7 +369,6 @@
         checkboxes[i].removeAttribute('required');
       }
     }
-
     function setRequired(name){
       let checkboxes = Array.from(document.getElementsByName(name));
       for(let i in checkboxes){
