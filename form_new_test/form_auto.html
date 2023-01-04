@@ -188,10 +188,10 @@
           width: '3'
         },
         {
-          label: '詳細內容',
+          label: '填寫區域',
           type: '段落',
           name: 'textarea',
-          value: '123',
+          value: '在這裡寫東西',
           valid: '', //required
           option: '',
           width: '12'
@@ -260,7 +260,7 @@
           */
           for (let j in options) {
             // 三元運算
-            // 下面第一行是只有陣列0需要驗證的意思
+            // 下面第一行是只有陣列為0需要驗證的意思
             let required = (j == '0') ? stru[i]['valid'] : '';
             options_html += `
               <div class="form-check form-check-inline">
@@ -346,7 +346,7 @@
           form_item_html += `
             <input type="hidden" name="${stru[i]['name']}" value="${stru[i]['value']}" id="${stru[i]['name']}">`;
         }
-
+ß
       }
       form_item.innerHTML = form_item_html;
 
