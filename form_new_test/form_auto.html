@@ -63,9 +63,7 @@
     window.onload = function() {
 
       let submitBtn = document.getElementById('submit');
-      submitBtn.onclick = function() {
-
-      }
+      submitBtn.onclick = function() {}
 
       let box = document.querySelector('.container');
       box.insertAdjacentHTML("afterend", "<div class='text-center mt-3'>container寬度：" + box.clientWidth + "px</div>" + "<div class='text-center mt-3'>網頁可見區域寬：" + document.body.clientWidth + "px</div>");
@@ -226,6 +224,7 @@
           width: '3'
         }
       ];
+
       let form_item = document.getElementById('form_item');
       let form_item_html = options_html = '';
       let options;
