@@ -69,153 +69,36 @@
           name: 'unit',
           value: '',
           valid: 'required', //required
-          option: '國泰｜台新｜玉山｜中信',
+          option: '國泰｜台新｜玉山｜電費｜水費',
           width: '3'
         },
         {
-          label: '網址',
-          type: 'url',
-          name: 'url',
-          value: '',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: 'EMAIL',
-          type: 'email',
-          name: 'email',
-          value: '',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: '密碼',
-          type: 'password',
-          name: 'password',
-          value: '',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: '日期方塊',
+          label: '繳費日期',
           type: 'date',
           name: 'date',
           value: '',
-          valid: '', //required
+          valid: 'required', //required
           option: '',
           width: '3'
         },
         {
-          label: '年月方塊',
-          type: 'month',
+          label: '繳費金額',
+          type: 'text',
           name: 'month',
           value: '',
-          valid: '', //required
-          option: '',
+          valid: 'required', //required
+          option: '1',
           width: '3'
         },
         {
-          label: '年週方塊',
-          type: 'week',
-          name: 'week',
+          label: '其他',
+          type: 'text',
+          name: 'ps',
           value: '',
           valid: '', //required
           option: '',
           width: '3'
         },
-        {
-          label: '顏色選擇器',
-          type: 'color',
-          name: 'color',
-          value: '#000000',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: '數字方塊',
-          type: 'number',
-          name: 'number',
-          value: '',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: '搜尋方塊',
-          type: 'search',
-          name: 'search',
-          value: '',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: '便當',
-          type: 'radio',
-          name: 'radio',
-          value: '',
-          valid: '', //required
-          option: '雞腿|排骨|招牌',
-          width: '6'
-        },
-        {
-          label: '單位',
-          type: 'select',
-          name: 'unit',
-          value: '',
-          valid: '', //required
-          option: '行政|訓導|總務',
-          width: '3'
-        },
-        {
-          label: '地區',
-          type: 'select_m',
-          name: 'area',
-          value: '',
-          valid: '', //required
-          option: '台南|高雄|屏東',
-          width: '3'
-        },
-        {
-          label: '填寫區域',
-          type: '段落',
-          name: 'textarea',
-          value: '在這裡寫東西',
-          valid: '', //required
-          option: '',
-          width: '12'
-        },
-        {
-          label: '種類',
-          type: 'checkbox',
-          name: 'checkbox',
-          value: '',
-          valid: '', //required
-          option: '學科|術科',
-          width: '12'
-        },
-        {
-          label: 'op',
-          type: 'hidden',
-          name: 'op',
-          value: 'set_sheet',
-          valid: '', //required
-          option: '',
-          width: '3'
-        },
-        {
-          label: 'callback_url',
-          type: 'hidden',
-          name: 'callback_url',
-          value: '',
-          valid: '', //required
-          option: '',
-          width: '3'
-        }
       ];
 
       let form_item = document.getElementById('form_item');
