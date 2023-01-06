@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>book</h1>
+    <img src="#" alt="1">
+    <img src="#" alt="2">
+    <img src="#" alt="3">
+    <script>
+        let take=document.getElementsByTagName('img');
+        let a;
+        for(let i=0;i<take.length;i++){
+            a += "第"+(i+1)+"本書為："+take[i].alt+"\n";
+        }
+        alert(a);
+
+
+    </script>
+
+
+</body>
+
+</html>
