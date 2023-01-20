@@ -63,16 +63,19 @@
       <div class="row" id="form_item">
 
       </div>
-      <input type="hidden" name="op" id="op" value="set_sheet" class="form-control">
+      <input type="hidden" name="op" id="op" value="set_sheet" >
+      <input type="hidden" name="callback_url" id="callback_url" value="" >
       <button type="submit" class="btn btn-primary w-100" id="submit">送出</button>
     </form>
   </main>
 
   <script>
     window.onload = function() {
+      let callback = window.location.href;
+      let callbackurl = document.getElementById('callback_url')
 
       let submitBtn = document.getElementById('submit');
-      submitBtn.onclick = function() {
+      submit.onclick = function() {  //監聽
 
       }
 
